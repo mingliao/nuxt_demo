@@ -2,6 +2,8 @@
 
 > Nuxt.js project
 
+本项目文档参考[```doc```](./doc)
+
 ## Build Setup
 
 ``` bash
