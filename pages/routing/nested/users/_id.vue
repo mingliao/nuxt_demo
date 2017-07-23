@@ -1,6 +1,6 @@
 <template>
     <div>
-      user detail
+      user detail--{{paramId}}
 
     </div>
 </template>
@@ -10,5 +10,12 @@
 </style>
 
 <script>
-    export default{}
+  export default{
+    validate ({ params }) {
+      return /^\d+$/.test(params.id)
+    },
+    asyncData ({ params }, callback) {
+      callback(null, { paramId: params.id })
+    }
+  }
 </script>

@@ -1,8 +1,14 @@
 <template>
     <div>
-      this is users .vue------------》下面是我的子页面
+      this is users .vue
 
-      <nuxt-link to="./users/1">users detail</nuxt-link>
+
+      <el-input placeholder="请输入id" v-model="idInput">
+        <template slot="prepend">goto</template>
+      </el-input>
+      ------------》下面是我的子页面      <nuxt-link :to="path">{{idInput}}</nuxt-link>
+
+
 
       <nuxt-child/>
 
@@ -14,5 +20,16 @@
 </style>
 
 <script>
-    export default{}
+    export default{
+      data () {
+        return {
+          idInput: '1'
+        }
+      },
+      computed: {
+        path: function () {
+          return `./${this.idInput}`
+        }
+      }
+    }
 </script>
