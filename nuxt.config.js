@@ -34,5 +34,6 @@ module.exports = {
         })
       }
     }
-  }
+  },
+  plugins: ['~plugins/element-ui']
 }

@@ -5,6 +5,7 @@
   "author": "765132065@qq.com <765132065@qq.com>",
   "private": true,
   "dependencies": {
+    "element-ui": "^1.4.0",
     "nuxt": "latest"
   },
   "scripts": {
