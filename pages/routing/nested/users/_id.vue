@@ -1,7 +1,6 @@
 <template>
     <div>
       user detail--{{paramId}}
-
     </div>
 </template>
 
