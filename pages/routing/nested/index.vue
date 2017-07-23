@@ -1,8 +1,7 @@
 <template>
     <div>
-      基础路由 <br>
-      <nuxt-link to="./basic/demo">basic/demo</nuxt-link>
-
+      goto users
+      <nuxt-link to="./nested/users">users</nuxt-link>
     </div>
 </template>
 

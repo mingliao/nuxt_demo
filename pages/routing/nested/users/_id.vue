@@ -1,7 +1,6 @@
 <template>
     <div>
-      基础路由 <br>
-      <nuxt-link to="./basic/demo">basic/demo</nuxt-link>
+      user detail
 
     </div>
 </template>
