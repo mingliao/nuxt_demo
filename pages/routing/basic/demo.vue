@@ -1,6 +1,5 @@
 <template>
     <div>
-
       demo in basic
     </div>
 </template>
