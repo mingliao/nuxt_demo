@@ -23,6 +23,9 @@
           prop="desc"
           align="center"
           label="简要说明">
+          <template scope="scope">
+            <span style="margin-left: 10px" class="level" :class="{warning: scope.row.level=='5'}">{{scope.row.desc}}</span>
+          </template>
         </el-table-column>
       </el-table>
 
@@ -31,8 +34,13 @@
     </div>
 </template>
 
-<style>
+<style lang="scss" >
+  .level {
 
+  }
+  .level.warning {
+    color: red;
+  }
 </style>
 
 <script>
@@ -42,19 +50,28 @@
         routList: [{
           name: '基础路由',
           path: './routing/basic',
-          desc: 'basic根目录'
+          desc: 'basic根目录',
+          level: '1'
         }, {
           name: '基础路由',
           path: './routing/basic/demo',
-          desc: 'basic/demo'
+          desc: 'basic/demo',
+          level: '2'
         }, {
           name: '动态路由',
           path: './routing/dynamic',
-          desc: '_表示参数'
+          desc: '_表示参数',
+          level: '3'
         }, {
           name: '嵌套路由',
           path: './routing/nested',
-          desc: ''
+          desc: '',
+          level: '4'
+        }, {
+          name: '动态嵌套路由',
+          path: './routing/dynamic_nested',
+          desc: '比较复杂，需要再看一下',
+          level: '5'
         }]
       }
     }

@@ -1,16 +1,15 @@
 <template>
     <div>
-      this is users .vue
-
-
+      <h2 class="title">nested route </h2>
       <el-input placeholder="请输入id" v-model="idInput">
-        <template slot="prepend">goto</template>
+        <template slot="prepend">goto the next page</template>
       </el-input>
-      ------------》下面是我的子页面      <nuxt-link :to="path">{{idInput}}</nuxt-link>
+      下面是我的子页面      <nuxt-link :to="path">{{idInput}}</nuxt-link>
 
+      <div style="border:2px solid #000">
+        <nuxt-child/>
+      </div>
 
-
-      <nuxt-child/>
 
     </div>
 </template>
@@ -28,7 +27,7 @@
       },
       computed: {
         path: function () {
-          return `./${this.idInput}`
+          return `/routing/nested/users/${this.idInput}`
         }
       }
     }
