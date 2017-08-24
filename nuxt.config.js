@@ -35,5 +35,5 @@ module.exports = {
       }
     }
   },
-  plugins: ['~plugins/element-ui', '~plugins/vue-awesome-swiper.js']
+  plugins: ['~plugins/element-ui', '~plugins/vue-awesome-swiper.js', '~plugins/icon-svg']
 }

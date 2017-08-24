@@ -44,29 +44,20 @@
       </el-table>
 
     </div>
-    <div>
-      <sync-com :name.sync="parentName"></sync-com>
-    </div>
+
   </section>
 </template>
 
 <script>
 import Logo from '~components/Logo.vue'
-import syncCom from '~components/syncCom.vue'
 
 export default {
   components: {
-    Logo,
-    syncCom
+    Logo
   },
-  methods: {
-    setName: function (name) {
-      this.parentName = name
-    }
-  },
+
   data () {
     return {
-      parentName: 'parentName..',
       tableData: [{
         date: '路由',
         name: 'routing',

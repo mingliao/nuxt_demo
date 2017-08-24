@@ -2,8 +2,9 @@
   <div v-swiper:mySwiper="swiperOption">
     <div class="swiper-wrapper">
       <div class="swiper-slide" v-for="banner in banners">
-        <img :src="banner">
+        <span>{{banner}}</span>
       </div>
+
     </div>
     <div class="swiper-pagination swiper-pagination-bullets"></div>
   </div>
@@ -18,23 +19,9 @@
           autoplay: 5000,
           initialSlide: 1,
           loop: true,
-          pagination: '.swiper-pagination',
-          onSlideChangeEnd: swiper => {
-            console.log('onSlideChangeEnd', swiper.realIndex)
-          }
+          pagination: '.swiper-pagination'
         }
       }
-    },
-    mounted () {
-      console.log('app init')
-      setTimeout(() => {
-        this.banners.push('/5.jpg')
-        console.log('banners update')
-      }, 3000)
-      console.log(
-        'This is current swiper instance object', this.mySwiper,
-        'It will slideTo banners 3')
-      this.mySwiper.slideTo(3)
     }
   }
 </script>
